@@ -1,4 +1,5 @@
-gradle101
+Gradle 101
 =========
 
-repo for my learning gradle
+repo for learning gradle in relation to #Building and Testing with Gradle
+http://shop.oreilly.com/product/0636920019909.do
