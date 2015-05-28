@@ -1,0 +1,47 @@
+// gradle task for build in api 
+
+// doFirst
+task setupDatabaseTests << {
+// This is the task's existing action
+println 'load test data'
+}
+setupDatabaseTests.doFirst {
+println 'create schema'
+}
+
+
+task setupDatabaseTests2 << {
+	println 'load test data'
+}
+
+setupDatabaseTests2 {
+	doFirst {
+		println 'create schema'
+	}
+}
+
+task setupDatabaseTests3 << {
+	println 'load test data'
+}
+
+setupDatabaseTests3.doFirst {
+	println 'create database schema'
+}
+
+setupDatabaseTests3.doFirst {
+	println 'drop database schema'
+}
+
+// Initial task definition (maybe not easily editable)
+task setupDatabaseTests4 << {
+println 'load test data'
+}
+// Our changes to the task (in a place we can edit them)
+setupDatabaseTests4 {
+doFirst {
+println 'create database schema'
+}
+doFirst {
+println 'drop database schema'
+}
+}
