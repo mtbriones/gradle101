@@ -1,0 +1,19 @@
+// ----------------------- dolast
+
+task setupDatabaseTests5 << {
+	println 'create database schema'
+}
+
+setupDatabaseTests5.doLast {
+	println 'load test data'
+}
+
+task setupDatabaseTests6 << {
+println 'create database schema'
+}
+setupDatabaseTests6.doLast {
+println 'load test data'
+}
+setupDatabaseTests6.doLast {
+println 'update version table'
+}
