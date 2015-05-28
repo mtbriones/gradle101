@@ -1,7 +1,13 @@
+apply plugin: 'java'
+
 task hello << {
 	print "Hello, "
 }
 
 task world(dependsOn: hello) << {
 	println 'world'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.4'
 }
